@@ -55,13 +55,13 @@ export default function ApproachPage() {
           </motion.div>
           <motion.div {...fadeInUp} className="order-1 md:order-2">
             <h2 className="text-sm font-bold text-bhs-brown tracking-widest uppercase mb-3">Our Philosophy</h2>
-            <h3 className="text-4xl font-bold text-gray-900 mb-6 leading-tight">
+            <h3 className="text-4xl font-bold text-white mb-6 leading-tight">
               Lifelong Learning & <br/><span className="text-bhs-green">Leadership</span>
             </h3>
-            <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+            <p className="text-lg text-white mb-6 leading-relaxed">
               At Blooming Heritage School, we emphasize lifelong learning, creativity, and leadership. Through a blend of academic rigor and exciting extracurricular activities, we aim to raise globally minded learners.
             </p>
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className="text-lg text-white leading-relaxed">
               Our curriculum intentionally combines the best of Nigerian and British educational frameworks, providing students with a well-rounded and globally relevant academic experience.
             </p>
           </motion.div>

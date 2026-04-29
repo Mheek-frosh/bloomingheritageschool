@@ -34,8 +34,8 @@ export default function FacilitiesPage() {
         <div className="text-center mb-16 max-w-3xl mx-auto">
           <motion.div {...fadeInUp}>
             <h2 className="text-sm font-bold text-bhs-brown tracking-widest uppercase mb-3">Extracurriculars & Amenities</h2>
-            <h3 className="text-4xl font-bold text-gray-900 mb-6">Fostering Balanced Development</h3>
-            <p className="text-lg text-gray-600">
+            <h3 className="text-4xl font-bold text-white mb-6">Fostering Balanced Development</h3>
+            <p className="text-lg text-white">
               Blooming Heritage School offers a range of modern amenities. Our extracurricular opportunities include swimming, music, debate, field trips, martial arts, and arts and crafts.
             </p>
           </motion.div>
