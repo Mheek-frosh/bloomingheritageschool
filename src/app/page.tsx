@@ -90,7 +90,7 @@ export default function Home() {
         </div>
 
         {/* Carousel Controls */}
-        <div className="absolute bottom-8 right-8 flex gap-4 z-20">
+        <div className="absolute bottom-8 right-8 hidden md:flex gap-4 z-20">
           <button 
             onClick={prevSlide}
             className="w-12 h-12 rounded-full border border-white/50 text-white flex items-center justify-center hover:bg-white hover:text-black transition-all"
@@ -108,12 +108,12 @@ export default function Home() {
 
       {/* Quick Stats */}
       <section className="relative -mt-12 z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
-        <div className="bg-white rounded-3xl shadow-xl shadow-bhs-green/5 p-8 border border-gray-100 flex flex-col md:flex-row justify-around items-center gap-8">
+        <div className="bg-white rounded-3xl shadow-xl shadow-bhs-green/5 p-4 md:p-8 border border-gray-100 grid grid-cols-2 md:flex md:flex-row justify-around items-center gap-4 md:gap-8">
           {[
-            { icon: <Users className="w-8 h-8 text-bhs-green" />, stat: "200+", label: "Happy Students" },
-            { icon: <MonitorPlay className="w-8 h-8 text-bhs-green" />, stat: "20+", label: "Modern Classrooms" },
-            { icon: <BookOpen className="w-8 h-8 text-bhs-green" />, stat: "5,000+", label: "Library Books" },
-            { icon: <Award className="w-8 h-8 text-bhs-green" />, stat: "10+", label: "Years of Excellence" },
+            { icon: <Users className="w-6 h-6 md:w-8 md:h-8 text-bhs-green" />, stat: "200+", label: "Happy Students" },
+            { icon: <MonitorPlay className="w-6 h-6 md:w-8 md:h-8 text-bhs-green" />, stat: "20+", label: "Modern Classrooms" },
+            { icon: <BookOpen className="w-6 h-6 md:w-8 md:h-8 text-bhs-green" />, stat: "5,000+", label: "Library Books" },
+            { icon: <Award className="w-6 h-6 md:w-8 md:h-8 text-bhs-green" />, stat: "10+", label: "Years of Excellence" },
           ].map((item, index) => (
             <motion.div 
               key={index}
@@ -123,11 +123,11 @@ export default function Home() {
               transition={{ delay: index * 0.1, duration: 0.5 }}
               className="text-center"
             >
-              <div className="w-16 h-16 mx-auto bg-bhs-beige/30 rounded-2xl flex items-center justify-center mb-4">
+              <div className="w-12 h-12 md:w-16 md:h-16 mx-auto bg-bhs-beige/30 rounded-xl md:rounded-2xl flex items-center justify-center mb-2 md:mb-4">
                 {item.icon}
               </div>
-              <div className="text-3xl font-bold text-gray-900">{item.stat}</div>
-              <div className="text-sm text-gray-500 font-medium">{item.label}</div>
+              <div className="text-xl md:text-3xl font-bold text-gray-900">{item.stat}</div>
+              <div className="text-xs md:text-sm text-gray-500 font-medium">{item.label}</div>
             </motion.div>
           ))}
         </div>
