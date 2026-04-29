@@ -43,12 +43,13 @@ export default function FacilitiesPage() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
-            { title: "Science Laboratory", image: "https://images.unsplash.com/photo-1564069114553-7215e1ff1890?q=80&w=2069&auto=format&fit=crop", icon: <Microscope />, desc: "Fully equipped for practical experiments." },
-            { title: "Music & Arts", image: "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?q=80&w=2070&auto=format&fit=crop", icon: <Music />, desc: "Dedicated rooms to explore creativity." },
-            { title: "Sports & Martial Arts", image: "https://images.unsplash.com/photo-1526676037777-05a232554f77?q=80&w=2070&auto=format&fit=crop", icon: <Award />, desc: "Physical education and specialized training." },
-            { title: "ICT Center", image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2132&auto=format&fit=crop", icon: <MonitorPlay />, desc: "Modern tech hubs and interactive whiteboards." },
-            { title: "Extensive Library", image: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=2070&auto=format&fit=crop", icon: <BookOpen />, desc: "Over 5,000 books spanning various disciplines." },
-            { title: "Field Trips", image: "https://images.unsplash.com/photo-1526715655513-33fa0f6f7eb3?q=80&w=2069&auto=format&fit=crop", icon: <MapPin />, desc: "Educational excursions and outdoor learning." },
+            { title: "Science Lab", image: "https://images.unsplash.com/photo-1564069114553-7215e1ff1890?q=80&w=2069&auto=format&fit=crop", icon: <Microscope />, desc: "Fully equipped for practical experiments and discovery." },
+            { title: "Art Room", image: "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?q=80&w=2070&auto=format&fit=crop", icon: <Music />, desc: "Dedicated spaces to explore creativity and artistic expression." },
+            { title: "Sports Facilities", image: "https://images.unsplash.com/photo-1526676037777-05a232554f77?q=80&w=2070&auto=format&fit=crop", icon: <Award />, desc: "Expansive areas for physical education and athletic training." },
+            { title: "Computer Lab", image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2132&auto=format&fit=crop", icon: <MonitorPlay />, desc: "Modern tech hubs and interactive digital learning stations." },
+            { title: "Library", image: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=2070&auto=format&fit=crop", icon: <BookOpen />, desc: "A vast collection of resources spanning various disciplines." },
+            { title: "Gardens and Green Spaces", image: "https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?q=80&w=1974&auto=format&fit=crop", icon: <MapPin />, desc: "Beautifully maintained outdoor areas for relaxation and nature study." },
+            { title: "Modern & Conducive Classrooms", image: "https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=2070&auto=format&fit=crop", icon: <BookOpen />, desc: "Comfortable, technologically integrated spaces for optimal learning." },
           ].map((facility, i) => (
             <motion.div 
               key={i}
@@ -56,7 +57,7 @@ export default function FacilitiesPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
-              className="group relative h-96 rounded-3xl overflow-hidden cursor-pointer"
+              className="group relative h-96 rounded-3xl overflow-hidden cursor-pointer shadow-xl"
             >
               <Image
                 src={facility.image}
@@ -65,12 +66,12 @@ export default function FacilitiesPage() {
                 className="object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
-              <div className="absolute bottom-0 left-0 p-8 w-full">
-                <div className="w-12 h-12 bg-bhs-brown text-white rounded-full flex items-center justify-center backdrop-blur-md mb-4 shadow-lg shadow-bhs-brown/30">
+              <div className="absolute bottom-0 left-0 p-8 w-full z-10">
+                <div className="w-12 h-12 bg-bhs-brown text-white rounded-full flex items-center justify-center backdrop-blur-md mb-4 shadow-lg shadow-black/50">
                   {facility.icon}
                 </div>
-                <h4 className="text-2xl font-bold text-white mb-2">{facility.title}</h4>
-                <p className="text-white/80 line-clamp-2">{facility.desc}</p>
+                <h4 className="text-2xl font-bold text-white mb-2 drop-shadow-md">{facility.title}</h4>
+                <p className="text-white/90 line-clamp-2 drop-shadow-md">{facility.desc}</p>
               </div>
             </motion.div>
           ))}
